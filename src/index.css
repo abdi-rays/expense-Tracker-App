@@ -1,0 +1,206 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --BODY-BGCOLOR:rgb(242, 239, 235);
+  --WHITE-CLR:#fff;
+  --BLACK-CLR:#000;
+  /* --BOX-SHDOW: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24); */
+  --BOX-SHDOW: 0px 0px 8px #000;
+  --FONT-CLR:#000;
+  --Special:#000;
+  --BOX-BG-CLR:#fff;
+}
+
+ [data-theme='dark'] {
+  --BODY-BGCOLOR:#0a0a0a;
+  --FONT-CLR:#fff;
+  --BORDER:#808080;
+  --BOX-BG-CLR:#000;
+  --BOX-SHDOW: 0px 0px 8px #808080;
+ }
+
+.App {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:var(--BODY-BGCOLOR);
+  color: var(--FONT-CLR);
+  transition:  all 0.3s ease;
+}
+header {
+  font-size: 14px;
+  background-color:#4a249d;
+  color: var(--WHITE-CLR);
+  text-align: center;
+ height: 60px;
+ place-content:center;
+ width: 100%;
+ letter-spacing: 2px;
+}
+.container {
+  width: 350px;
+  margin: 15px auto;
+}
+.summary > h1{
+  letter-spacing: 1px;
+  font-size: 25px;
+  margin-top: 5px;
+}
+.balanceTitle{
+  margin-top: 10px;
+}
+.income_expence_container {
+  background-color:var(--BOX-BG-CLR);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: var(--BOX-SHDOW);
+}
+.income_expence_container > div {
+  flex: 1;
+  text-align: center;
+}
+h4 {
+  text-transform: uppercase;
+  color: var(--FONT-CLR);
+}
+h3{
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 30px 0 10px;
+  font-size: 20px;
+}
+.money {
+  font-size: 14px;
+  margin: 5px 0;
+  letter-spacing: 1px;
+}
+.money.plus {
+  color:#2ecc71;
+}
+.money.minus {
+  color:#c0392b;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+ul li {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  color: #333;
+  margin: 10px 0;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+ul li .Exname {
+  flex: 1;
+  margin-left: 5px;
+  font-weight: 500;
+}
+.edit {
+ font-size: 22px;
+ margin-left: 15px;
+ font-weight: bold;
+ opacity: 0.7;
+}
+ul li.plus {
+  color:#2ecc71;
+}
+ul li.minus {
+  color:#c0392b;
+}
+.delete-btn {
+  background-color: #c0392b;
+  color: var(--WHITE-CLR);
+  font-size: 14px;
+  border: none;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100% , -50%);
+  line-height: 15px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+ ul li:hover .delete-btn {
+  opacity: 1;
+}
+label {
+  display: inline-block;
+  font-weight: 500;
+  margin: 8px 0;
+}
+input[type='text'] ,
+input[type='number'] {
+ border: 1px solid #dedede;
+ display: block;
+ width: 100%;
+ padding: 10px;
+ font-size: 15px;
+ font-weight: 500;
+ cursor: poiner;
+}
+
+.btn {
+  display: block;
+  background-color:#4a249d;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  color: var(--WHITE-CLR);
+  font-size: 14px;
+  font-weight: bold;
+}
+ 
+.summary {
+  position: relative;
+}
+  /* // DARK MODE */
+
+  .mode-container {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+  #dark__mode__btn{
+    position: absolute;
+    width: 45px;
+    background: #ccc;
+    top: 0px;
+    right: 0px;
+    padding: 2px 3px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    transition: padding-left 0.5s , background-color 0.5s;
+    border: 2px solid hsla(0, 3%, 70%, 0.297);
+    margin-top: 5px;
+
+}
+#dark__mode__btn span{
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+#dark__mode__btn.on {
+  padding-left: 23px;
+  background-color: #0a0a0a;
+}
